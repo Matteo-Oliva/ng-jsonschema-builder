@@ -163,5 +163,8 @@
       }
     }
   },
-  "defaultProject": "apicNgJsonSchema"
+  "defaultProject": "apicNgJsonSchema",
+  "cli": {
+    "analytics": false
+  }
 }
