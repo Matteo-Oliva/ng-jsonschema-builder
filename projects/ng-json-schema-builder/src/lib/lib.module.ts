@@ -1,15 +1,16 @@
-import { NgModule, ModuleWithProviders, forwardRef } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { FormsModule, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ModuleWithProviders, NgModule, forwardRef } from '@angular/core';
+
+import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+import { FieldJsonSchemaComponent } from './field/field.component';
 import { JsonSchemaComponent } from './jsonschema/jsonschema.component';
 import { MainJsonSchemaComponent } from './main/main.component';
-import { FieldJsonSchemaComponent } from './field/field.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import {MatTabsModule} from '@angular/material/tabs';
 import { SelectSchemaJsonSchemaComponent } from './field/selectschema.component';
 import { StateService } from './state.service';
-
-import { MatTabsModule } from '@angular/material/tabs';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
 
 export const CustomDirectives = [
   JsonSchemaComponent,
@@ -28,10 +29,12 @@ export const NgBrDirectives = {
 @NgModule({
   imports: [
     CommonModule,
+    BrowserModule,
     FormsModule,
     MatTabsModule,
     MatIconModule,
     MatButtonModule,
+
   ],
   declarations: [CustomDirectives],
   exports: [CustomDirectives],

@@ -20,6 +20,7 @@
                 </div>
             </div>
         </mat-tab>
+
         <mat-tab label="Json Schema" (click)="convertObj2Schema()">
             {{schema|json}}
 
@@ -28,7 +29,8 @@
 
     <div class="tab-action">
         <button mat-icon-button aria-label="Download" (click)="downloadJSON()">
-            <mat-icon>vertical_align_bottom</mat-icon>
+
+          <mat-icon>vertical_align_bottom</mat-icon>
         </button>
         <button mat-icon-button aria-label="Copy">
             <mat-icon>file_copy</mat-icon>
