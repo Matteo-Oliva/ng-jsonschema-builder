@@ -8,7 +8,7 @@ import { JsonSchemaComponent } from './jsonschema/jsonschema.component';
 import { MainJsonSchemaComponent } from './main/main.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 import { SelectSchemaJsonSchemaComponent } from './field/selectschema.component';
 import { StateService } from './state.service';
 
@@ -48,7 +48,7 @@ export const NgBrDirectives = {
   ],
 })
 class NgJsonSchemaBuilder {
-  public static forRoot(): ModuleWithProviders {
+  public static forRoot(): ModuleWithProviders<any> {
     return {
       ngModule: NgJsonSchemaBuilder,
     };
